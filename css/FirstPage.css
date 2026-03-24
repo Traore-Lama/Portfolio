@@ -1,3 +1,6 @@
+/* ───────────────────────────────────────────
+   NAV
+─────────────────────────────────────────── */
 #barreNav {
   display: flex;
   justify-content: center;
@@ -12,6 +15,7 @@
   margin: auto;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
+
 .button {
   text-decoration: none;
   color: white;
@@ -26,6 +30,9 @@
   transform: scale(1.1);
 }
 
+/* ───────────────────────────────────────────
+   PROFILE HERO
+─────────────────────────────────────────── */
 .avatar {
   width: 150px;
   height: 150px;
@@ -46,7 +53,6 @@
   margin-top: 100px;
 }
 
-
 .profile-container {
   display: flex;
   align-items: center;
@@ -66,7 +72,6 @@
 .profile-text h1 span {
   color: red;
 }
-
 
 .hero-btns {
   display: flex;
@@ -105,5 +110,64 @@
   color: #1e6fd9;
 }
 
+/* ───────────────────────────────────────────
+   Barre de Competences
+─────────────────────────────────────────── */
+.skills-card {
+  width: 80%;
+  margin: 60px auto 80px;
+  background: #fff5f0;
+  border: 1px solid rgba(255, 100, 50, 0.18);
+  border-radius: 20px;
+  padding: 40px 52px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
 
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 
+.skills-col:not(:last-child) {
+  border-right: 1px solid rgba(255, 100, 50, 0.2);
+  padding-right: 40px;
+  margin-right: 40px;
+}
+
+.skills-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e03a00;
+}
+
+.skills-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.2;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  font-size: 13px;
+  font-weight: 600;
+  color: black;
+  padding: 7px 16px;
+  border-radius: 50px;
+  border: 1.5px solid rgba(255, 100, 50, 0.3);
+  background-color: #fff5f0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  cursor: default;
+}
