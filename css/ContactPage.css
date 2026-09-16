@@ -1,15 +1,28 @@
+:root {
+  --red:   #FF0000;
+  --white: #FFFFFF;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: sans-serif;
+  background: var(--white);
+  color: #111;
+  min-height: 100vh;
+}
+
 /* ───────────────────────────────────────────
-   NAV
+   Barre de NAV
 ─────────────────────────────────────────── */
 #barreNav {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black;
-  background-color: #fff5f0;
+  background-color: var(--white);
   border-radius: 50px;
   height: 100px;
-  width: 80%;
+  width: 65%;
   gap: 60px;
   font-size: larger;
   margin: auto;
@@ -18,14 +31,170 @@
 
 .button {
   text-decoration: none;
-  color: white;
-  background: linear-gradient(45deg, orange, red);
+  color: var(--white);
+  background: var(--red);
   padding: 10px 20px;
   border-radius: 8px;
   transition: 0.3s;
 }
 
 .button:hover {
-  box-shadow: 0 0 20px orange;
+  box-shadow: 0 0 20px var(--red);
   transform: scale(1.1);
+}
+
+
+/* ───────────────────────────────────────────
+   LAYOUT
+─────────────────────────────────────────── */
+.contact-wrapper {
+  width: 80%;
+  margin: 70px auto 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* ───────────────────────────────────────────
+   HEADER
+─────────────────────────────────────────── */
+.contact-header {
+  text-align: center;
+}
+
+.contact-header h1 {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.2;
+  color: #111;
+}
+
+.contact-header h1 span {
+  color: var(--red);
+}
+
+.contact-header p {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* ───────────────────────────────────────────
+   CONTEXT PILLS
+─────────────────────────────────────────── */
+.contact-context {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.contact-context span {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 50px;
+  border: 1.5px solid rgba(255, 0, 0, 0.25);
+  background: var(--white);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+  color: #333;
+}
+
+/* ───────────────────────────────────────────
+   CONTACT CARDS
+─────────────────────────────────────────── */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  border-radius: 16px;
+  border: 1.5px solid rgba(255, 0, 0, 0.18);
+  background: var(--white);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+  text-decoration: none;
+  color: #111;
+  transition: 0.25s ease;
+}
+
+.contact-card:hover {
+  border-color: var(--red);
+  box-shadow: 0 8px 28px rgba(255, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+.card-icon {
+  font-size: 28px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 0, 0, 0.07);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+.card-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.card-value {
+  font-size: 13px;
+  color: #333;
+}
+
+.card-arrow {
+  font-size: 18px;
+  color: var(--red);
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  transform: translateX(-4px);
+}
+
+.contact-card:hover .card-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ───────────────────────────────────────────
+   CV BUTTON
+─────────────────────────────────────────── */
+.btn-cv {
+  display: inline-block;
+  background: var(--red);
+  color: var(--white);
+  text-decoration: none;
+  padding: 14px 36px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: 0.25s ease;
+  box-shadow: 0 5px 20px rgba(255, 0, 0, 0.25);
+}
+
+.btn-cv:hover {
+  background: #cc0000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(255, 0, 0, 0.35);
 }

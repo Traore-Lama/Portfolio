@@ -1,3 +1,8 @@
+:root {
+  --red:   #FF0000;
+  --white: #FFFFFF;
+}
+
 /* ───────────────────────────────────────────
    NAV
 ─────────────────────────────────────────── */
@@ -5,11 +10,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black;
-  background-color: #fff5f0;
+  background-color: var(--white);
   border-radius: 50px;
   height: 100px;
-  width: 80%;
+  width: 65%;
   gap: 60px;
   font-size: larger;
   margin: auto;
@@ -18,14 +22,14 @@
 
 .button {
   text-decoration: none;
-  color: white;
-  background: linear-gradient(45deg, orange, red);
+  color: var(--white);
+  background: var(--red);
   padding: 10px 20px;
   border-radius: 8px;
   transition: 0.3s;
 }
 
 .button:hover {
-  box-shadow: 0 0 20px orange;
+  box-shadow: 0 0 20px var(--red);
   transform: scale(1.1);
 }
